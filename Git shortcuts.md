@@ -1,4 +1,4 @@
-﻿Informações úteis:
+﻿# Informações úteis:
 * Por que usar Command Line? Porque é uma ferramenta que utiliza todo o "poder" do git, algumas funções não podem ser utilizadas com programas gráficos do git. Também por questões de ajuda online, ao pesquisar em fóruns ou buscar informações online, e mais comum encontrar as informações por comandos.
 * Por que usar Source Control? Porque e uma forma de backup, controle de versões, facilita de verificar quem fez certos ajustes, voltar modificações anteriores e experimentos isolados.
 * Repositorios: Sao 3 repositórios locais e um remoto. Working directory - Repositorio local onde esta trabalhando. Staging Area - Repositório temporário que enfileira as versões para serem consolidados (commit). Commit - Repositorio do Git (historico). Remote repository - Repositorio com os tres anteriores internamente.
@@ -25,64 +25,20 @@
 
 
 
+## Repositorio
+
+* Criar um repositório é muito simples, segue o link com instruções para a criar um repositorio: https://guides.github.com/activities/hello-world/.
+
+# Comandos
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Repositorio
-
-
-Criar um repositório é muito simples, segue o link com instruções para a criar um repositorio: https://guides.github.com/activities/hello-world/.
-
-
-Comandos
-
-
-pwd - print working directory - Verificar o pasta atual.
-mkdir - make directory - Criar pasta.
-cd - change directory - mudar pasta, ir para.
-ls - list - Listar arquivos dentro da pasta.
-ls -al - list all listing directory - Listar todos os arquivos dentro da pasta incluindo .files e .folders.
-rm - remove directory - remover pasta ou arquivo.
-rm -rf nome_do_arquivo - remover arquivo forçado. (r- apagar recursivamente, f- apagar forcado)
-
-
-
+* pwd - print working directory - Verificar o pasta atual.
+* mkdir - make directory - Criar pasta.
+* cd - change directory - mudar pasta, ir para.
+* ls - list - Listar arquivos dentro da pasta.
+* ls -al - list all listing directory - Listar todos os arquivos dentro da pasta incluindo .files e .folders.
+* rm - remove directory - remover pasta ou arquivo.
+* rm -rf nome_do_arquivo - remover arquivo forçado. (r- apagar recursivamente, f- apagar forcado)
 
 
 
