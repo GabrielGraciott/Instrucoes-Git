@@ -83,7 +83,7 @@
 * git diff master origin/<nome_da_branch> - Comparar alteracoes local com a branch remota.
 
 
-##=== Branchs ===
+## === Branchs ===
 
 
 * git branch -a - Listar todas as ramificacoes.
@@ -121,15 +121,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 * git commit -m "ch230 [Sammuel R] "ch230/feature/selecionar-interesses""
 
 
@@ -152,7 +143,7 @@
 * git push -u origin nome_da_branch // enviar o branch pro github
 
 
-## ====depois de fazer as alterações=====
+## ==== Depois de fazer as alterações =====
 
 * git add . // adicionar todas as modificações feitas
 
@@ -161,7 +152,7 @@
 * git push // enviar o código atual pro github
 
 
-## ==== extras \/ ===
+## ==== Extras ====
 
 
 * git rebase nome_da_branch // atualizar a origem da branch atual
