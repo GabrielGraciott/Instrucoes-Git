@@ -41,91 +41,88 @@
 * rm -rf nome_do_arquivo - remover arquivo forçado. (r- apagar recursivamente, f- apagar forcado)
 
 
-
-git help log - Mostrar funcoes do Git (Q para sair).
-git config --global user.name "insira seu nome" - Utiliza para configurar seu usuario do git.
-git config --global user.email "insira seu email" - utiliza-se para configurar seu e-mail.
-git status - Verificar estados dos arquivos e diretórios. Verifica se há alguma alteração entre os repositórios, working directory, staging area, repository e remote.
-git clone insira_a_URL - Criar um arquivo a partir de um projeto no Github.
-git reset HEAD <nome_do_arquivo> - Retornar um arquivo do Staging para o working directory
-git ls-files - Listar todos os arquivos commitados.
-
-
-git add -A - "-A" é utilizado para adicionar todos os arquivos recursivamente e também para atualizar todos arquivos renomeados, movidos ou excluídos.
+* git help log - Mostrar funcoes do Git (Q para sair).
+* git config --global user.name "insira seu nome" - Utiliza para configurar seu usuario do git.
+* git config --global user.email "insira seu email" - utiliza-se para configurar seu e-mail.
+* git status - Verificar estados dos arquivos e diretórios. Verifica se há alguma alteração entre os repositórios, working directory, staging area, repository e remote.
+* git clone insira_a_URL - Criar um arquivo a partir de um projeto no Github.
+* git reset HEAD <nome_do_arquivo> - Retornar um arquivo do Staging para o working directory
+* git ls-files - Listar todos os arquivos commitados.
 
 
-git add -u - "-u" é utilizado para informar alterações no nome do arquivo e nao esta sendo criado um novo.
+* git add -A - "-A" é utilizado para adicionar todos os arquivos recursivamente e também para atualizar todos arquivos renomeados, movidos ou excluídos.
+* git add -u - "-u" é utilizado para informar alterações no nome do arquivo e nao esta sendo criado um novo.
 
 
 
 
 
 
-.gitignore - Arquivo criado para ignorar arquivos indesejados.
+* .gitignore - Arquivo criado para ignorar arquivos indesejados.
 
 
-==== Git Log (historico) =====
-git log - Verificar historico de Commits
-git log --oneline - Verificar historico de cada commit abreviado e em uma linha (recomendado)
-git log --abbrev-commit  - Verificar historico abreviado.
-git log --oneline --graph --decorate  -
-git log "codigo_abreviado"..."codigo_abreviado" - Verificar historico de X a Y.
-git log --since="dias_atras" - Verificar históricos de X dias atras.
-git log -- "nome_do_arquivo" -Verificar historico de um arquivo.
-git log --follow -- "arquivo_deletado" - 
-git show "codigo completo" - 
+## ==== Git Log (historico) =====
+* git log - Verificar historico de Commits
+* git log --oneline - Verificar historico de cada commit abreviado e em uma linha (recomendado)
+* git log --abbrev-commit  - Verificar historico abreviado.
+* git log --oneline --graph --decorate  -
+* git log "codigo_abreviado"..."codigo_abreviado" - Verificar historico de X a Y.
+* git log --since="dias_atras" - Verificar históricos de X dias atras.
+* git log -- "nome_do_arquivo" -Verificar historico de um arquivo.
+* git log --follow -- "arquivo_deletado" - 
+* git show "codigo completo" - 
 
 
+## === Git Diff ===
+
+* git diff - Comparar alterações realizadas entre Working Area (local) com Staging Area (git add).
+* git diff HEAD - Comparar alterações entre Working Area (local) com Repository (git commit).
+* git diff --staged HEAD - Comparar alterações entre Staging Area (git add) com Repository (git commit).
+* git diff -- <nome_do_arquivo> - Comparar alterações de apenas um arquivo.
+* git diff <commit_ID_1> <commit_ID_2> - Comparar alteracoes entre Commits.
+* git diff master origin/<nome_da_branch> - Comparar alteracoes local com a branch remota.
 
 
-=== Git Diff ===
+##=== Branchs ===
 
 
-git diff - Comparar alterações realizadas entre Working Area (local) com Staging Area (git add).
-git diff HEAD - Comparar alterações entre Working Area (local) com Repository (git commit).
-git diff --staged HEAD - Comparar alterações entre Staging Area (git add) com Repository (git commit).
-git diff -- <nome_do_arquivo> - Comparar alterações de apenas um arquivo.
-git diff <commit_ID_1> <commit_ID_2> - Comparar alteracoes entre Commits.
-git diff master origin/<nome_da_branch> - Comparar alteracoes local com a branch remota.
-
-
-=== Branchs ===
-
-
-git branch -a - Listar todas as ramificacoes.
-git branch <nome_da_branch> - Criar uma nova ramificacao.
-git checkout <nome_da_branch> - Alterar para a ramificacao.
-git branch -m <nome_da_branch_atual> <novo_nome> - Alterar nome da ramificacao.
-git branch -d <nome_da_branch> - "-d" de deletar, remove ramificacao.
+* git branch -a - Listar todas as ramificacoes.
+* git branch <nome_da_branch> - Criar uma nova ramificacao.
+* git checkout <nome_da_branch> - Alterar para a ramificacao.
+* git branch -m <nome_da_branch_atual> <novo_nome> - Alterar nome da ramificacao.
+* git branch -d <nome_da_branch> - "-d" de deletar, remove ramificacao.
  
-==== Ao iniciar o trabalho ====
+ 
+ 
+ 
+## ==== Ao iniciar o trabalho ====
 
+* git pull // atualiza o código com base na branch do github.
 
-git pull // atualiza o código com base na branch do github.
+* git checkout -b nome_da_branch // criar a branch nome_da_branch e trocar pra ela.
 
+* git branch nome_da_branch // cria branch nova.
+* git checkout nome_da_branch // troca pra branch.
 
-git checkout -b nome_da_branch // criar a branch nome_da_branch e trocar pra ela.
 
 
-git branch nome_da_branch // cria branch nova.
-git checkout nome_da_branch // troca pra branch.
+## ====depois de fazer as alterações \/ =====
 
 
+* git add . // adicionar todas as modificações feitas à fila (staging area).
 
 
-====depois de fazer as alterações \/ =====
+* git commit -m "Explica o que fez nesse commit" - preparar as alterações para serem enviadas ao github (commit).
 
+* git commit -am // git add e git commit em um unico comando.
 
-git add . // adicionar todas as modificações feitas à fila (staging area).
+* git push origin nome_da_branch // enviar o código atual pro github.
 
 
-git commit -m "Explica o que fez nesse commit" - preparar as alterações para serem enviadas ao github (commit).
 
 
-git commit -am // git add e git commit em um unico comando.
 
 
-git push origin nome_da_branch // enviar o código atual pro github.
 
 
 
@@ -133,68 +130,43 @@ git push origin nome_da_branch // enviar o código atual pro github.
 
 
 
+* git commit -m "ch230 [Sammuel R] "ch230/feature/selecionar-interesses""
 
 
+* git commit -m "ch208 [Sammuel R] Create initial folder structure" -m "Create initial folders to strucute the project"
+> chCARD (clubhouse + card do story atual)
+> [Nome Inicial]
+> Tarefa no infinitivo começando com letra maiúscula
+> Nome dos arquivos com letras maiúsculas quando precisar
 
 
+* git pull // atualiza o código com base na branch do github
 
 
+* git checkout -b nome_da_branch // criar a branch nome_da_branch e trocar pra ela
 
 
+* git branch nome_da_branch // cria branch nova
+* git checkout nome_da_branch // troca pra branch
 
+* git push -u origin nome_da_branch // enviar o branch pro github
 
 
+## ====depois de fazer as alterações=====
 
+* git add . // adicionar todas as modificações feitas
 
-git commit -m "ch230 [Sammuel R] "
-ch230/feature/selecionar-interesses
+* git commit -m "Explica o que fez nesse commit"
 
+* git push // enviar o código atual pro github
 
-git commit -m "ch208 [Sammuel R] Create initial folder structure" -m "Create initial folders to strucute the project"
->chCARD (clubhouse + card do story atual)
->[Nome Inicial]
->Tarefa no infinitivo começando com letra maiúscula
->Nome dos arquivos com letras maiúsculas quando precisar
 
+## ==== extras \/ ===
 
 
+* git rebase nome_da_branch // atualizar a origem da branch atual
 
-git pull // atualiza o código com base na branch do github
+* git status // mostra o status atual (algum arquivo modificado, adicionado ou excluído)
 
 
-git checkout -b nome_da_branch // criar a branch nome_da_branch e trocar pra ela
-
-
-git branch nome_da_branch // cria branch nova
-git checkout nome_da_branch // troca pra branch
-
-
-git push -u origin nome_da_branch // enviar o branch pro github
-
-
-
-
-====depois de fazer as alterações \/ =====
-
-
-git add . // adicionar todas as modificações feitas
-
-
-git commit -m "Explica o que fez nesse commit"
-
-
-git push // enviar o código atual pro github
-
-
-==== extras \/ ===
-
-
-git rebase nome_da_branch // atualizar a origem da branch atual
-
-
-git status // mostra o status atual (algum arquivo modificado, adicionado ou excluído)
-
-
-
-
-git checkout . // remove todas as modificações feitas (SE PRECISAR)
+* git checkout . // remove todas as modificações feitas (SE PRECISAR)
