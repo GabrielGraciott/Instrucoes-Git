@@ -1,22 +1,7 @@
-﻿# Informações úteis:
+# Informações úteis:
 * Por que usar Command Line? Porque é uma ferramenta que utiliza todo o "poder" do git, algumas funções não podem ser utilizadas com programas gráficos do git. Também por questões de ajuda online, ao pesquisar em fóruns ou buscar informações online, e mais comum encontrar as informações por comandos.
 * Por que usar Source Control? Porque e uma forma de backup, controle de versões, facilita de verificar quem fez certos ajustes, voltar modificações anteriores e experimentos isolados.
 * Repositorios: Sao 3 repositórios locais e um remoto. Working directory - Repositorio local onde esta trabalhando. Staging Area - Repositório temporário que enfileira as versões para serem consolidados (commit). Commit - Repositorio do Git (historico). Remote repository - Repositorio com os tres anteriores internamente.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -57,12 +42,11 @@
 
 
 
-
-
 * .gitignore - Arquivo criado para ignorar arquivos indesejados.
 
 
 ## ==== Git Log (historico) =====
+
 * git log - Verificar historico de Commits
 * git log --oneline - Verificar historico de cada commit abreviado e em uma linha (recomendado)
 * git log --abbrev-commit  - Verificar historico abreviado.
@@ -86,15 +70,12 @@
 
 ## === Branchs ===
 
-
 * git branch -a - Listar todas as ramificacoes.
 * git branch <nome_da_branch> - Criar uma nova ramificacao.
 * git checkout <nome_da_branch> - Alterar para a ramificacao.
 * git branch -m <nome_da_branch_atual> <novo_nome> - Alterar nome da ramificacao.
 * git branch -d <nome_da_branch> - "-d" de deletar, remove ramificacao.
- 
- 
- 
+
  
 ## ==== Ao iniciar o trabalho ====
 
@@ -106,12 +87,9 @@
 * git checkout nome_da_branch // troca pra branch.
 
 
-
 ## ====depois de fazer as alterações \/ =====
 
-
 * git add . // adicionar todas as modificações feitas à fila (staging area).
-
 
 * git commit -m "Explica o que fez nesse commit" - preparar as alterações para serem enviadas ao github (commit).
 
@@ -120,10 +98,7 @@
 * git push origin nome_da_branch // enviar o código atual pro github.
 
 
-
-
 * git commit -m "ch230 [Sammuel R] "ch230/feature/selecionar-interesses""
-
 
 * git commit -m "ch208 [Sammuel R] Create initial folder structure" -m "Create initial folders to strucute the project"
 > chCARD (clubhouse + card do story atual)
@@ -131,12 +106,9 @@
 > Tarefa no infinitivo começando com letra maiúscula
 > Nome dos arquivos com letras maiúsculas quando precisar
 
-
 * git pull // atualiza o código com base na branch do github
 
-
 * git checkout -b nome_da_branch // criar a branch nome_da_branch e trocar pra ela
-
 
 * git branch nome_da_branch // cria branch nova
 * git checkout nome_da_branch // troca pra branch
@@ -155,10 +127,8 @@
 
 ## ==== Extras ====
 
-
 * git rebase nome_da_branch // atualizar a origem da branch atual
 
 * git status // mostra o status atual (algum arquivo modificado, adicionado ou excluído)
-
 
 * git checkout . // remove todas as modificações feitas (SE PRECISAR)
