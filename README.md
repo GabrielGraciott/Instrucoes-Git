@@ -58,7 +58,7 @@
 * git show "codigo completo" - 
 
 
-## === Git Diff ===
+## ==== Git Diff ====
 
 * git diff - Comparar alterações realizadas entre Working Area (local) com Staging Area (git add).
 * git diff HEAD - Comparar alterações entre Working Area (local) com Repository (git commit).
@@ -68,7 +68,7 @@
 * git diff master origin/<nome_da_branch> - Comparar alteracoes local com a branch remota.
 
 
-## === Branchs ===
+## ==== Git Branchs ====
 
 * git branch -a - Listar todas as ramificacoes.
 * git branch <nome_da_branch> - Criar uma nova ramificacao.
@@ -76,7 +76,7 @@
 * git branch -m <nome_da_branch_atual> <novo_nome> - Alterar nome da ramificacao.
 * git branch -d <nome_da_branch> - "-d" de deletar, remove ramificacao.
 
-## ==== Merge ====
+## ==== Git Merge ====
 
 // Fast-forward merge - Apenas quando a branch não possui nenhuma alteracao apos ter sido ramificada.
 
@@ -84,14 +84,26 @@
 * git merge --no-ff - Realizar a mescla sem transpor o que foi feito na Master (git log --oneline --decorate --graph).
 
 
-## ==== Rebase ====
+## ==== Git Rebase ====
 
 // Funciona como se fosse rebobinar a branch. 
 
 * git rebase <branch_a_rebobinar> - Rebobinar as alteracoes para antes das alteracoes na branch atual.
 * git pull --rebase origin <branch_remota> - Rebobinar as informacoes adicionadas no GitHub (remote) com as informacoes locais.
 
+## ==== Git Stash ====
 
+// Utiliza para armazenar uma alteracao para trabalhar em outra mais importante.
+
+* git stash - Por padrao, armazena as informacoes atuais realizadas para prosseguir com o diretorio "limpo" para trabalhar em outros dados.
+* git stash apply - Retomar as alteracoes realizadas antes do git stash.
+* git stash list - Listar todas as stash criadas.
+* git stash drop - Deletar uma stash.
+* git stash -u - "-u" permite inserir os arquivos não marcados pelo Git (novos arquivos, ainda nao realizados git add).
+* git stash pop - Dois comandos em um, apply e drop. retoma as alteracoes que estao no Stash e apaga a Stash.
+* git stash drop stash@{<numero_na_lista>} - Apagar uma stash especifica.
+* git stash clear - Apagar todas as stashs disponiveis.
+* git stash branch <nome_da_branch_> - Criar e alterar para branch e retomar os itens da Stash na branch. Tambem apaga a stash.
 
 ## ==== Ao iniciar o trabalho ====
 
@@ -103,7 +115,7 @@
 * git checkout nome_da_branch // troca pra branch.
 
 
-## ====depois de fazer as alterações \/ =====
+## ==== Depois de fazer as alterações =====
 
 * git add . // adicionar todas as modificações feitas à fila (staging area).
 
