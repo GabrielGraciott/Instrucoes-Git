@@ -48,6 +48,7 @@
 * git clone insira_a_URL - Criar um arquivo a partir de um projeto no Github.
 * git reset HEAD <nome_do_arquivo> - Retornar um arquivo do Staging para o working directory
 * git ls-files - Listar todos os arquivos commitados.
+* git fetch <repositorio_local> <repositorio_remoto> - Comando não destrutivo que atualiza as referencias entre Repositorio Remoto e Repositorio local.
 
 
 * git add -A - "-A" é utilizado para adicionar todos os arquivos recursivamente e também para atualizar todos arquivos renomeados, movidos ou excluídos.
