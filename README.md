@@ -76,7 +76,22 @@
 * git branch -m <nome_da_branch_atual> <novo_nome> - Alterar nome da ramificacao.
 * git branch -d <nome_da_branch> - "-d" de deletar, remove ramificacao.
 
- 
+## ==== Merge ====
+
+// Fast-forward merge - Apenas quando a branch não possui nenhuma alteracao apos ter sido ramificada.
+
+* git merge <nome_da_branch> - Realizar a mescla da branch escolhida com a branch atual.
+* git merge --no-ff - Realizar a mescla sem transpor o que foi feito na Master (git log --oneline --decorate --graph).
+
+
+## ==== Rebase ====
+
+// Funciona como se fosse rebobinar a branch. 
+
+* git rebase <branch_a_rebobinar> - Rebobinar as alteracoes para antes das alteracoes na branch atual.
+
+
+
 ## ==== Ao iniciar o trabalho ====
 
 * git pull // atualiza o código com base na branch do github.
