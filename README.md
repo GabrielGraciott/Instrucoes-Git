@@ -89,6 +89,7 @@
 // Funciona como se fosse rebobinar a branch. 
 
 * git rebase <branch_a_rebobinar> - Rebobinar as alteracoes para antes das alteracoes na branch atual.
+* git pull --rebase origin <branch_remota> - Rebobinar as informacoes adicionadas no GitHub (remote) com as informacoes locais.
 
 
 
