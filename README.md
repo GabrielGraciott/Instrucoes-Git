@@ -4,18 +4,11 @@
 * Repositorios: Sao 3 repositórios locais e um remoto. Working directory - Repositorio local onde esta trabalhando. Staging Area - Repositório temporário que enfileira as versões para serem consolidados (commit). Commit - Repositorio do Git (historico). Remote repository - Repositorio com os tres anteriores internamente.
 
 
-
-
-
-
-
-
 ## Repositorio
 
 * Criar um repositório é muito simples, segue o link com instruções para a criar um repositorio: https://guides.github.com/activities/hello-world/.
 
 # Comandos
-
 
 * pwd - print working directory - Verificar o pasta atual.
 * mkdir - make directory - Criar pasta.
@@ -25,27 +18,27 @@
 * rm - remove directory - remover pasta ou arquivo.
 * rm -rf nome_do_arquivo - remover arquivo forçado. (r- apagar recursivamente, f- apagar forcado)
 
+# Comandos do Git
+
+## ==== Comandos Gerais ====
 
 * git help log - Mostrar funcoes do Git (Q para sair).
 * git config --global user.name "insira seu nome" - Utiliza para configurar seu usuario do git.
 * git config --global user.email "insira seu email" - utiliza-se para configurar seu e-mail.
-* git status - Verificar estados dos arquivos e diretórios. Verifica se há alguma alteração entre os repositórios, working directory, staging area, repository e remote.
 * git clone insira_a_URL - Criar um arquivo a partir de um projeto no Github.
 * git reset HEAD <nome_do_arquivo> - Retornar um arquivo do Staging para o working directory
 * git ls-files - Listar todos os arquivos commitados.
+* git status - Verificar estados dos arquivos e diretórios. Verifica se há alguma alteração entre os repositórios, working directory, staging area, repository e remote.
 * git fetch <repositorio_local> <repositorio_remoto> - Comando não destrutivo que atualiza as referencias entre Repositorio Remoto e Repositorio local.
-
-
 * git add -A - "-A" é utilizado para adicionar todos os arquivos recursivamente e também para atualizar todos arquivos renomeados, movidos ou excluídos.
 * git add -u - "-u" é utilizado para informar alterações no nome do arquivo e nao esta sendo criado um novo.
-
-
-
 
 * .gitignore - Arquivo criado para ignorar arquivos indesejados.
 
 
 ## ==== Git Log (historico) =====
+
+// Historico de commits realizados.
 
 * git log - Verificar historico de Commits
 * git log --oneline - Verificar historico de cada commit abreviado e em uma linha (recomendado)
@@ -60,6 +53,8 @@
 
 ## ==== Git Diff ====
 
+// Comando utilizado para  verificar as diferenças em qualquer arquivo.
+
 * git diff - Comparar alterações realizadas entre Working Area (local) com Staging Area (git add).
 * git diff HEAD - Comparar alterações entre Working Area (local) com Repository (git commit).
 * git diff --staged HEAD - Comparar alterações entre Staging Area (git add) com Repository (git commit).
@@ -70,6 +65,8 @@
 
 ## ==== Git Branchs ====
 
+// Ramificações do Git para organizar seus projetos.
+
 * git branch -a - Listar todas as ramificacoes.
 * git branch <nome_da_branch> - Criar uma nova ramificacao.
 * git checkout <nome_da_branch> - Alterar para a ramificacao.
@@ -78,6 +75,7 @@
 
 ## ==== Git Merge ====
 
+// Comando para juntar as informacoes de um mesmo arquivo quando houver um conflito.
 // Fast-forward merge - Apenas quando a branch não possui nenhuma alteracao apos ter sido ramificada.
 
 * git merge <nome_da_branch> - Realizar a mescla da branch escolhida com a branch atual.
@@ -105,7 +103,7 @@
 * git stash clear - Apagar todas as stashs disponiveis.
 * git stash branch <nome_da_branch_> - Criar e alterar para branch e retomar os itens da Stash na branch. Tambem apaga a stash.
 
-## ==== Ao iniciar o trabalho ====
+# ==== Ao iniciar o trabalho ====
 
 * git pull // atualiza o código com base na branch do github.
 
@@ -115,16 +113,15 @@
 * git checkout nome_da_branch // troca pra branch.
 
 
-## ==== Depois de fazer as alterações =====
+# ==== Depois de fazer as alterações =====
 
 * git add . // adicionar todas as modificações feitas à fila (staging area).
 
 * git commit -m "Explica o que fez nesse commit" - preparar as alterações para serem enviadas ao github (commit).
 
-* git commit -am // git add e git commit em um unico comando.
+* git commit -am // git add e git commit em um unico comando (usado apenas em caso do git ja ter o arquivo marcado).
 
 * git push origin nome_da_branch // enviar o código atual pro github.
-
 
 * git commit -m "ch230 [Sammuel R] "ch230/feature/selecionar-interesses""
 
@@ -144,16 +141,7 @@
 * git push -u origin nome_da_branch // enviar o branch pro github
 
 
-## ==== Depois de fazer as alterações =====
-
-* git add . // adicionar todas as modificações feitas
-
-* git commit -m "Explica o que fez nesse commit"
-
-* git push // enviar o código atual pro github
-
-
-## ==== Extras ====
+# ==== Extras ====
 
 * git rebase nome_da_branch // atualizar a origem da branch atual
 
