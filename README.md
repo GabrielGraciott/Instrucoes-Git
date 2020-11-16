@@ -10,33 +10,35 @@
 
 # Comandos
 
-* pwd - print working directory - Verificar o pasta atual.
-* mkdir - make directory - Criar pasta.
-* cd - change directory - mudar pasta, ir para.
-* ls - list - Listar arquivos dentro da pasta.
-* ls -al - list all listing directory - Listar todos os arquivos dentro da pasta incluindo .files e .folders.
-* rm - remove directory - remover pasta ou arquivo.
-* rm -rf nome_do_arquivo - remover arquivo forçado. (r- apagar recursivamente, f- apagar forcado)
+* pwd // print working directory - Verificar o pasta atual.
+* mkdir // make directory - Criar pasta.
+* cd // change directory - mudar pasta, ir para.
+* ls // list - Listar arquivos dentro da pasta.
+* ls -al // list all listing directory - Listar todos os arquivos dentro da pasta incluindo .files e .folders.
+* rm - remove directory // remover pasta ou arquivo.
+* rm -rf nome_do_arquivo // remover arquivo forçado. (r- apagar recursivamente, f- apagar forcado)
 
 # Comandos do Git
 
-## ==== Comandos Gerais ====
+## Comandos Gerais
 
-* git help log - Mostrar funcoes do Git (Q para sair).
-* git config --global user.name "insira seu nome" - Utiliza para configurar seu usuario do git.
-* git config --global user.email "insira seu email" - utiliza-se para configurar seu e-mail.
-* git clone insira_a_URL - Criar um arquivo a partir de um projeto no Github.
-* git reset HEAD <nome_do_arquivo> - Retornar um arquivo do Staging para o working directory
-* git ls-files - Listar todos os arquivos commitados.
-* git status - Verificar estados dos arquivos e diretórios. Verifica se há alguma alteração entre os repositórios, working directory, staging area, repository e remote.
-* git fetch <repositorio_local> <repositorio_remoto> - Comando não destrutivo que atualiza as referencias entre Repositorio Remoto e Repositorio local.
+* git help log // Mostrar funcoes do Git (Q para sair).
+* git config --global user.name "insira seu nome" // Utiliza para configurar seu usuario do git.
+* git config --global user.email "insira seu email" // utiliza-se para configurar seu e-mail.
+* git clone insira_a_URL // Criar um arquivo a partir de um projeto no Github.
+* git reset HEAD <nome_do_arquivo> // Retornar um arquivo do Staging para o working directory
+* git ls-files // Listar todos os arquivos commitados.
+* git status // Verificar estados dos arquivos e diretórios. Verifica se há alguma alteração entre os repositórios, working directory, staging area, repository e remote.
+* git fetch <repositorio_local> <repositorio_remoto> // Comando não destrutivo que atualiza as referencias entre Repositorio Remoto e Repositorio local.
 * git add -A - "-A" é utilizado para adicionar todos os arquivos recursivamente e também para atualizar todos arquivos renomeados, movidos ou excluídos.
 * git add -u - "-u" é utilizado para informar alterações no nome do arquivo e nao esta sendo criado um novo.
+* git commit -m <mensagem>// Inserir as informações no repositório Commit para ser enviado ao GitHub posteriormente. (-m é abreviação para inserir a mensagem).
+* git commmit --amend // Alterar o comentario do commit realizado.
 
 * .gitignore - Arquivo criado para ignorar arquivos indesejados.
 
 
-## ==== Git Log (historico) =====
+## Git Log (historico)
 
 // Historico de commits realizados.
 
@@ -46,12 +48,12 @@
 * git log --oneline --graph --decorate  -
 * git log "codigo_abreviado"..."codigo_abreviado" - Verificar historico de X a Y.
 * git log --since="dias_atras" - Verificar históricos de X dias atras.
-* git log -- "nome_do_arquivo" -Verificar historico de um arquivo.
+* git log --"nome_do_arquivo" -Verificar historico de um arquivo.
 * git log --follow -- "arquivo_deletado" - 
 * git show "codigo completo" - 
 
 
-## ==== Git Diff ====
+## Git Diff
 
 // Comando utilizado para  verificar as diferenças em qualquer arquivo.
 
@@ -63,7 +65,7 @@
 * git diff master origin/<nome_da_branch> - Comparar alteracoes local com a branch remota.
 
 
-## ==== Git Branchs ====
+## Git Branchs
 
 // Ramificações do Git para organizar seus projetos.
 
@@ -73,7 +75,7 @@
 * git branch -m <nome_da_branch_atual> <novo_nome> - Alterar nome da ramificacao.
 * git branch -d <nome_da_branch> - "-d" de deletar, remove ramificacao.
 
-## ==== Git Merge ====
+## Git Merge
 
 // Comando para juntar as informacoes de um mesmo arquivo quando houver um conflito.
 // Fast-forward merge - Apenas quando a branch não possui nenhuma alteracao apos ter sido ramificada.
@@ -82,14 +84,14 @@
 * git merge --no-ff - Realizar a mescla sem transpor o que foi feito na Master (git log --oneline --decorate --graph).
 
 
-## ==== Git Rebase ====
+## Git Rebase
 
 // Funciona como se fosse rebobinar a branch. 
 
 * git rebase <branch_a_rebobinar> - Rebobinar as alteracoes para antes das alteracoes na branch atual.
 * git pull --rebase origin <branch_remota> - Rebobinar as informacoes adicionadas no GitHub (remote) com as informacoes locais.
 
-## ==== Git Stash ====
+###  Git Stash 
 
 // Utiliza para armazenar uma alteracao para trabalhar em outra mais importante.
 
@@ -102,6 +104,20 @@
 * git stash drop stash@{<numero_na_lista>} - Apagar uma stash especifica.
 * git stash clear - Apagar todas as stashs disponiveis.
 * git stash branch <nome_da_branch_> - Criar e alterar para branch e retomar os itens da Stash na branch. Tambem apaga a stash.
+
+## Tag
+
+// Tag são rótulos ou marcaçoes que pode ser aplicado em qualquer commit já realizado.
+
+* git tag <nome_da_tag> - Criar uma marca em um commit, por padrao, sera marcado o ultimo commit.
+* git tag --list - Listar as tags. (Obs: caso utilize apenas -list, sera criado uma tag com nome list).
+* git tag --delete <nome_da_tag> - Deletar ma tag (Obs.: -delete criara uma tag com nome delete).
+* git tag -a <nome_da_tag>// Criar tag com anotação.
+* git show <nome_da_tag> - Mostrar as informacões do commit marcado com a tag informada. Em caso de ser uma tag com anotação, sera apresentado nome da tag, nome da pessoa que criou a tag, data e as anotações realizadas na tag,
+* git tag <nome_da_tag> -m <mensagem> // Criar uma tag com mensagem.
+* git tag -a <nome_da_tag> <commit_history> // Criar tag em um commit anterior.
+* git tag -a <nome_tag_existente> -f <commit_ID_correta> // Alterar a Tag criada de um commit para outro.
+* git push origin :<nome_da_tag> // Excluir Tag no GitHub, mantem no repositorio local.
 
 # ==== Ao iniciar o trabalho ====
 
