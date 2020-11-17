@@ -147,15 +147,6 @@
 > Tarefa no infinitivo começando com letra maiúscula
 > Nome dos arquivos com letras maiúsculas quando precisar
 
-* git pull // atualiza o código com base na branch do github
-
-* git checkout -b nome_da_branch // criar a branch nome_da_branch e trocar pra ela
-
-* git branch nome_da_branch // cria branch nova
-* git checkout nome_da_branch // troca pra branch
-
-* git push -u origin nome_da_branch // enviar o branch pro github
-
 
 # ==== Extras ====
 
